@@ -122,8 +122,10 @@ GameObject:
   m_Component:
   - component: {fileID: 130720642}
   - component: {fileID: 130720641}
+  - component: {fileID: 130720645}
   - component: {fileID: 130720640}
   - component: {fileID: 130720643}
+  - component: {fileID: 130720646}
   - component: {fileID: 130720644}
   m_Layer: 0
   m_Name: PlayerCharacter
@@ -151,7 +153,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!212 &130720641
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -187,8 +189,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9e119d2cdf5fc234282d07d341c2b8d5, type: 3}
-  m_Color: {r: 0.9433962, g: 0.06674972, b: 0.7722932, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3d2de49fb0ebaa44a9b7094e0b5091a2, type: 3}
+  m_Color: {r: 0.9528302, g: 0.9033909, b: 0.94311893, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -205,8 +207,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 130720639}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.36, y: 0.31, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -9.44, y: -3.38, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -219,22 +221,22 @@ BoxCollider2D:
   m_GameObject: {fileID: 130720639}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: a98d1cb4d9a10e1468e1b72c2eed9458, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0078395605, y: 0.00979203}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.19, y: 0.29}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.21604466, y: 0.30650914}
   m_EdgeRadius: 0
 --- !u!114 &130720644
 MonoBehaviour:
@@ -248,11 +250,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
-  name: 
-  jumpHeight: 0
-  speed: 0
-  hasKey: 0
-  isOnGround: 0
+  name: Nobunaga
+  jumpForce: 15
+  speed: 40
+  groundContactFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  groundDetectTrig: {fileID: 130720646}
+  playerGroundCollider: {fileID: 130720643}
+  playerMovePhys: {fileID: 6200000, guid: 7cb0fa590997cc347b5d36f29ca6d4d7, type: 2}
+  playerStopPhys: {fileID: 6200000, guid: a98d1cb4d9a10e1468e1b72c2eed9458, type: 2}
+  maxSpeed: 10
+--- !u!95 &130720645
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 130720639}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a12cebb1fa1b18439ee61940dff71aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!58 &130720646
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 130720639}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.1}
+  serializedVersion: 2
+  m_Radius: 0.078309774
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +551,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 3c31cf94860f366428420a9325582715, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
