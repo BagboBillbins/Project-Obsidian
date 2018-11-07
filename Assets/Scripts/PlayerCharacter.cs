@@ -55,7 +55,6 @@ public class PlayerCharacter : MonoBehaviour {
     void FixedUpdate()
     {
         anim.SetFloat("Speed", Mathf.Abs(horzInput));
-
         UpdatePhysMat();
         Move();
         if (horzInput < 0 && !facingRight)
