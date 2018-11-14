@@ -1,0 +1,567 @@
+fileFormatVersion: 2
+guid: 16a974bb011d22a4687ed21965fbd565
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: fire-skull_0
+    21300002: fire-skull_1
+    21300004: fire-skull_2
+    21300006: fire-skull_3
+    21300008: fire-skull_4
+    21300010: fire-skull_5
+    21300012: fire-skull_6
+    21300014: fire-skull_7
+    21300016: fire-skull_8
+    21300018: fire-skull_9
+    21300020: fire-skull_10
+    21300022: fire-skull_11
+    21300024: fire-skull_12
+    21300026: fire-skull_13
+    21300028: fire-skull_14
+    21300030: fire-skull_15
+    21300032: fire-skull_16
+    21300034: fire-skull_17
+    21300036: fire-skull_18
+    21300038: fire-skull_19
+    21300040: fire-skull_20
+    21300042: fire-skull_21
+    21300044: fire-skull_22
+    21300046: fire-skull_23
+    21300048: fire-skull_24
+    21300050: fire-skull_25
+    21300052: fire-skull_26
+    21300054: fire-skull_27
+    21300056: fire-skull_28
+    21300058: fire-skull_29
+    21300060: fire-skull_30
+    21300062: fire-skull_31
+    21300064: fire-skull_32
+    21300066: fire-skull_33
+    21300068: fire-skull_34
+    21300070: fire-skull_35
+    21300072: fire-skull_36
+    21300074: fire-skull_37
+    21300076: fire-skull_38
+    21300078: fire-skull_39
+    21300080: fire-skull_40
+    21300082: fire-skull_41
+    21300084: fire-skull_42
+    21300086: fire-skull_43
+    21300088: fire-skull_44
+    21300090: fire-skull_45
+    21300092: fire-skull_46
+    21300094: fire-skull_47
+    21300096: fire-skull_48
+    21300098: fire-skull_49
+    21300100: fire-skull_50
+    21300102: fire-skull_51
+    21300104: fire-skull_52
+    21300106: fire-skull_53
+    21300108: fire-skull_54
+    21300110: fire-skull_55
+    21300112: fire-skull_56
+    21300114: fire-skull_57
+    21300116: fire-skull_58
+    21300118: fire-skull_59
+    21300120: fire-skull_60
+    21300122: fire-skull_61
+    21300124: fire-skull_62
+    21300126: fire-skull_63
+    21300128: fire-skull_64
+    21300130: fire-skull_65
+    21300132: fire-skull_66
+    21300134: fire-skull_67
+    21300136: fire-skull_68
+    21300138: fire-skull_69
+    21300140: fire-skull_70
+    21300142: fire-skull_71
+    21300144: fire-skull_72
+    21300146: fire-skull_73
+    21300148: fire-skull_74
+    21300150: fire-skull_75
+    21300152: fire-skull_76
+    21300154: fire-skull_77
+    21300156: fire-skull_78
+    21300158: fire-skull_79
+    21300160: fire-skull_80
+    21300162: fire-skull_81
+    21300164: fire-skull_82
+    21300166: fire-skull_83
+    21300168: fire-skull_84
+    21300170: fire-skull_85
+    21300172: fire-skull_86
+    21300174: fire-skull_87
+    21300176: fire-skull_88
+    21300178: fire-skull_89
+    21300180: fire-skull_90
+    21300182: fire-skull_91
+    21300184: fire-skull_92
+    21300186: fire-skull_93
+    21300188: fire-skull_94
+    21300190: fire-skull_95
+    21300192: fire-skull_96
+    21300194: fire-skull_97
+    21300196: fire-skull_98
+    21300198: fire-skull_99
+    21300200: fire-skull_100
+    21300202: fire-skull_101
+    21300204: fire-skull_102
+    21300206: fire-skull_103
+    21300208: fire-skull_104
+    21300210: fire-skull_105
+    21300212: fire-skull_106
+    21300214: fire-skull_107
+    21300216: fire-skull_108
+    21300218: fire-skull_109
+    21300220: fire-skull_110
+    21300222: fire-skull_111
+    21300224: fire-skull_112
+    21300226: fire-skull_113
+    21300228: fire-skull_114
+    21300230: fire-skull_115
+    21300232: fire-skull_116
+    21300234: fire-skull_117
+    21300236: fire-skull_118
+    21300238: fire-skull_119
+    21300240: fire-skull_120
+    21300242: fire-skull_121
+    21300244: fire-skull_122
+    21300246: fire-skull_123
+    21300248: fire-skull_124
+    21300250: fire-skull_125
+    21300252: fire-skull_126
+    21300254: fire-skull_127
+    21300256: fire-skull_128
+    21300258: fire-skull_129
+    21300260: fire-skull_130
+    21300262: fire-skull_131
+    21300264: fire-skull_132
+    21300266: fire-skull_133
+    21300268: fire-skull_134
+    21300270: fire-skull_135
+    21300272: fire-skull_136
+    21300274: fire-skull_137
+    21300276: fire-skull_138
+    21300278: fire-skull_139
+    21300280: fire-skull_140
+    21300282: fire-skull_141
+    21300284: fire-skull_142
+    21300286: fire-skull_143
+    21300288: fire-skull_144
+    21300290: fire-skull_145
+    21300292: fire-skull_146
+    21300294: fire-skull_147
+    21300296: fire-skull_148
+    21300298: fire-skull_149
+    21300300: fire-skull_150
+    21300302: fire-skull_151
+    21300304: fire-skull_152
+    21300306: fire-skull_153
+    21300308: fire-skull_154
+    21300310: fire-skull_155
+    21300312: fire-skull_156
+    21300314: fire-skull_157
+    21300316: fire-skull_158
+    21300318: fire-skull_159
+    21300320: fire-skull_160
+    21300322: fire-skull_161
+    21300324: fire-skull_162
+    21300326: fire-skull_163
+    21300328: fire-skull_164
+    21300330: fire-skull_165
+    21300332: fire-skull_166
+    21300334: fire-skull_167
+    21300336: fire-skull_168
+    21300338: fire-skull_169
+    21300340: fire-skull_170
+    21300342: fire-skull_171
+    21300344: fire-skull_172
+    21300346: fire-skull_173
+    21300348: fire-skull_174
+    21300350: fire-skull_175
+    21300352: fire-skull_176
+    21300354: fire-skull_177
+    21300356: fire-skull_178
+    21300358: fire-skull_179
+    21300360: fire-skull_180
+    21300362: fire-skull_181
+    21300364: fire-skull_182
+    21300366: fire-skull_183
+    21300368: fire-skull_184
+    21300370: fire-skull_185
+    21300372: fire-skull_186
+    21300374: fire-skull_187
+    21300376: fire-skull_188
+    21300378: fire-skull_189
+    21300380: fire-skull_190
+    21300382: fire-skull_191
+    21300384: fire-skull_192
+    21300386: fire-skull_193
+    21300388: fire-skull_194
+    21300390: fire-skull_195
+    21300392: fire-skull_196
+    21300394: fire-skull_197
+    21300396: fire-skull_198
+    21300398: fire-skull_199
+    21300400: fire-skull_200
+    21300402: fire-skull_201
+    21300404: fire-skull_202
+    21300406: fire-skull_203
+    21300408: fire-skull_204
+    21300410: fire-skull_205
+    21300412: fire-skull_206
+    21300414: fire-skull_207
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fire-skull_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 8
+        width: 68
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef630822d07038499d8385163416c99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 84
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f6b182435a4cc049a6d9b03136b695e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 5
+        width: 87
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0725cb1f3a398e74f80089b4a0818595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_3
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 4
+        width: 82
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c74e10cca7be8b74ca5f70bbe0defa9c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_4
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 81
+        width: 9
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9690567dcf6cc40944a50cf08de77d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_5
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 8
+        width: 73
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e511cb410cde9444eb777e162cc4d1ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_6
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 4
+        width: 69
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64e5ddfa49e96f47b40b6f42e9bd80e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_7
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 47
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e08a8f6acba6bbd45b06ada1978bb0cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_8
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 47
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d9c16bc2b4d89f41887c5454f88db81
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_9
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 7
+        width: 87
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b397eb14e9e85c548adf43fab09aa310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_10
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 4
+        width: 59
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3591a7c6b6d694a48b6f0c081234e92d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_11
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 5
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5036e623ae102914cb437481ef198bd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire-skull_12
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 31
+        width: 11
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ee5f9d771e48f41a10e098642ab3bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: bcdb484265183c64db8b41232f1371b6
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

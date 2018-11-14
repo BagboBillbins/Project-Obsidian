@@ -30,8 +30,7 @@ public class PlayerCharacter : MonoBehaviour {
     private Collider2D[] groundHitDetector = new Collider2D[16];
     private Rigidbody2D rb2d;
     private Animator anim;
-
-    
+    private SkullCheckpoint currentCheck;
 
     // Use this for initialization
     void Start ()
@@ -102,6 +101,15 @@ public class PlayerCharacter : MonoBehaviour {
     {
         onGround = groundDetectTrig.OverlapCollider(groundContactFilter, groundHitDetector) > 0;
         //Debug.Log("Grounded: " + onGround);
+
+    }
+    public void SetCurrentCheck(SkullCheckpoint newCurrentCheck)
+    {
+        if (currentCheck != null)
+            currentCheck.setActive(false);
+
+        currentCheck = newCurrentCheck;
+        currentCheck.setActive(true);
 
     }
 
