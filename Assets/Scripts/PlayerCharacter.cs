@@ -55,6 +55,7 @@ public class PlayerCharacter : MonoBehaviour {
     void FixedUpdate()
     {
         anim.SetFloat("Speed", Mathf.Abs(horzInput));
+        anim.SetBool("Ground", onGround);
         UpdatePhysMat();
         Move();
         if (horzInput < 0 && !facingRight)
@@ -110,6 +111,7 @@ public class PlayerCharacter : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);//reload current scene on death
         else
         {
+            
             rb2d.velocity = Vector2.zero;
             transform.position = currentCheck.transform.position;
         }
