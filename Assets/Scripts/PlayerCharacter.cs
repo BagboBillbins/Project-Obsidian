@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class PlayerCharacter : MonoBehaviour {
 
     [SerializeField]
+    private float deadColliderSize = 1;
+    [SerializeField]
     private int lives = 3;
     [SerializeField]
     private string name = "";
@@ -18,7 +20,7 @@ public class PlayerCharacter : MonoBehaviour {
     [SerializeField]
     private Collider2D groundDetectTrig;
     [SerializeField]
-    private Collider2D playerGroundCollider;
+    private CapsuleCollider2D playerGroundCollider;
     [SerializeField]
     private PhysicsMaterial2D playerMovePhys, playerStopPhys;
 
@@ -27,6 +29,9 @@ public class PlayerCharacter : MonoBehaviour {
     public float maxSpeed = 10f;
     private bool facingRight;
     private bool onGround;
+    private float aliveColliderSize;
+    public bool isDead;
+   // private bool canMove;
 
     private Collider2D[] groundHitDetector = new Collider2D[16];
     private Rigidbody2D rb2d;
@@ -36,6 +41,7 @@ public class PlayerCharacter : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        aliveColliderSize = playerGroundCollider.size.y;
         //have to initialize rigidbody or will throw null exception
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -43,7 +49,7 @@ public class PlayerCharacter : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        rb2d.gravityScale = 5;
+        //rb2d.gravityScale = 5;
         UpdateOnGround();
         UpdateHorzInput();
         JumpInputHandler();
@@ -58,11 +64,23 @@ public class PlayerCharacter : MonoBehaviour {
         anim.SetBool("Ground", onGround);
         UpdatePhysMat();
         Move();
-        if (horzInput < 0 && !facingRight)
-            Flip();
-        else if (horzInput > 0 && facingRight)
-            Flip();
+        if(!isDead)
+        {
+            if (horzInput < 0 && !facingRight)
+                Flip();
+            else if (horzInput > 0 && facingRight)
+                Flip();
+        }
         
+        CheckRespawn();
+        
+    }
+    public void Dead()
+    {
+        playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, deadColliderSize);
+        isDead = true;
+        anim.SetBool("Dead", isDead);
+       // rb2d.velocity = Vector2.zero;
     }
 
 
@@ -79,10 +97,14 @@ public class PlayerCharacter : MonoBehaviour {
     }
     private void Move()
     {
-        rb2d.AddForce(Vector2.right * horzInput * speed);
-        Vector2 clampedVelocity = rb2d.velocity;//set clamp for velocity
-        clampedVelocity.x = Mathf.Clamp(rb2d.velocity.x, -maxSpeed, maxSpeed);//clamp the max speed on the x axis
-        rb2d.velocity = clampedVelocity;
+        
+        if(!isDead)
+        {
+            rb2d.AddForce(Vector2.right * horzInput * speed);
+            Vector2 clampedVelocity = rb2d.velocity;//set clamp for velocity
+            clampedVelocity.x = Mathf.Clamp(rb2d.velocity.x, -maxSpeed, maxSpeed);//clamp the max speed on the x axis
+            rb2d.velocity = clampedVelocity;
+        }        
     }
     void Flip()
     {
@@ -105,17 +127,27 @@ public class PlayerCharacter : MonoBehaviour {
         //Debug.Log("Grounded: " + onGround);
 
     }
+    public void CheckRespawn()
+    {
+        
+        if (isDead && Input.GetButtonDown("Respawn"))
+        {
+            Respawn();
+        }
+    }
+  
     public void Respawn()
     {
         if (currentCheck == null)
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);//reload current scene on death
         else
         {
-            
             rb2d.velocity = Vector2.zero;
             transform.position = currentCheck.transform.position;
         }
-
+        isDead = false;
+        playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, aliveColliderSize);
+        anim.SetBool("Dead", isDead);
     }
     public void SetCurrentCheck(SkullCheckpoint newCurrentCheck)
     {

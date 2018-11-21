@@ -11,7 +11,8 @@ public class FlameSkull : MonoBehaviour {
         {
             Debug.Log("Player entered hazard");
             PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
-            player.Respawn(); //respawn player at checkpoint
+            player.Dead();
+            player.CheckRespawn(); //respawn player at checkpoint
 
         }
         else
