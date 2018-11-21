@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Activate") && playerInTrig)
+        if (Input.GetButtonDown("Vertical") && playerInTrig)
         {
             Debug.Log("Player activated door");
             SceneManager.LoadScene(sceneToLoad);
