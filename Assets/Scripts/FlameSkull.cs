@@ -2,28 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ghost : MonoBehaviour {
+public class FlameSkull : MonoBehaviour {
 
-    private Animator anim;
-
-	// Use this for initialization
-	void Start ()
-    {
-        anim = GetComponent<Animator>();
-    }
-	
-	// Update is called once per frame
-	void FixedUpdate ()
-    {
-        anim.SetBool("Appear", true);
-	}
     private void OnTriggerEnter2D(Collider2D collision)
 
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("Player entered hazard");
             PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
-            anim.SetBool("Vanish", true);
+            player.Respawn(); //respawn player at checkpoint
 
         }
         else

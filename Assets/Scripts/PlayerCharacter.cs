@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -101,6 +102,17 @@ public class PlayerCharacter : MonoBehaviour {
     {
         onGround = groundDetectTrig.OverlapCollider(groundContactFilter, groundHitDetector) > 0;
         //Debug.Log("Grounded: " + onGround);
+
+    }
+    public void Respawn()
+    {
+        if (currentCheck == null)
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);//reload current scene on death
+        else
+        {
+            rb2d.velocity = Vector2.zero;
+            transform.position = currentCheck.transform.position;
+        }
 
     }
     public void SetCurrentCheck(SkullCheckpoint newCurrentCheck)
