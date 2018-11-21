@@ -26,8 +26,6 @@ public class Ghost : MonoBehaviour {
         {
             PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
             anim.SetBool("Vanish", true);
-            
-
         }
         else
             Debug.Log("Something has hit a hazard");

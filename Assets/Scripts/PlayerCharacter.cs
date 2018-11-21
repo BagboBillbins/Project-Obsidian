@@ -26,11 +26,11 @@ public class PlayerCharacter : MonoBehaviour {
 
     private float horzInput;
     private float jump;
-    public float maxSpeed = 10f;
+    private float maxSpeed = 10f;
     private bool facingRight;
     private bool onGround;
     private float aliveColliderSize;
-    public bool isDead;
+    private bool isDead;
    // private bool canMove;
 
     private Collider2D[] groundHitDetector = new Collider2D[16];
@@ -75,15 +75,7 @@ public class PlayerCharacter : MonoBehaviour {
         CheckRespawn();
         
     }
-    public void Dead()
-    {
-        playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, deadColliderSize);
-        isDead = true;
-        anim.SetBool("Dead", isDead);
-       // rb2d.velocity = Vector2.zero;
-    }
-
-
+    
     private void UpdateHorzInput()
     {
         horzInput = Input.GetAxisRaw("Horizontal"); //raw ignores unity's smoothing filter which makes movement more responsive
@@ -127,13 +119,18 @@ public class PlayerCharacter : MonoBehaviour {
         //Debug.Log("Grounded: " + onGround);
 
     }
+
+    public void Dead()
+    {
+        playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, deadColliderSize);
+        isDead = true;
+        anim.SetBool("Dead", isDead);
+        // rb2d.velocity = Vector2.zero;
+    }
     public void CheckRespawn()
     {
-        
         if (isDead && Input.GetButtonDown("Respawn"))
-        {
             Respawn();
-        }
     }
   
     public void Respawn()
