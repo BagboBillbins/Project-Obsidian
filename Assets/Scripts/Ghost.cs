@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour {
 
+    private SpriteRenderer spriteRenderer;
     private Animator anim;
 
 	// Use this for initialization
 	void Start ()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
 	
@@ -24,11 +26,12 @@ public class Ghost : MonoBehaviour {
         {
             PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
             anim.SetBool("Vanish", true);
+            
 
         }
         else
             Debug.Log("Something has hit a hazard");
-
+        //Destroy(spriteRenderer);
 
     }
 }
