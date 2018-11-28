@@ -36,6 +36,7 @@ public class PlayerCharacter : MonoBehaviour {
     private Collider2D[] groundHitDetector = new Collider2D[16];
     private Rigidbody2D rb2d;
     private Animator anim;
+    private AudioSource audioSource;
     private SkullCheckpoint currentCheck;
 
     // Use this for initialization
@@ -45,7 +46,8 @@ public class PlayerCharacter : MonoBehaviour {
         //have to initialize rigidbody or will throw null exception
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-	}
+        audioSource = GetComponent<AudioSource>();
+    }
 	// Update is called once per frame
 	void Update ()
     {
@@ -124,6 +126,7 @@ public class PlayerCharacter : MonoBehaviour {
     {
         playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, deadColliderSize);
         isDead = true;
+        audioSource.Play();
         anim.SetBool("Dead", isDead);
         // rb2d.velocity = Vector2.zero;
     }

@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class FlameSkull : MonoBehaviour {
 
+    private AudioSource audioSource;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
 
     {
@@ -11,6 +17,7 @@ public class FlameSkull : MonoBehaviour {
         {
             Debug.Log("Player entered hazard");
             PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
+            audioSource.Play();
             player.Dead();
             player.CheckRespawn(); //respawn player at checkpoint
 

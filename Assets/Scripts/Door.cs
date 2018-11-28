@@ -9,7 +9,12 @@ public class Door : MonoBehaviour
     [SerializeField]
     private string sceneToLoad;
     private bool playerInTrig;
+    private AudioSource audioSource;
 
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,6 +35,7 @@ public class Door : MonoBehaviour
     {
         if (Input.GetButtonDown("Activate") && playerInTrig)
         {
+            audioSource.Play();
             Debug.Log("Player activated door");
             SceneManager.LoadScene(sceneToLoad);
         }
