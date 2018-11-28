@@ -14,7 +14,7 @@ TagManager:
   - 
   - 
   - Ground
-  - 
+  - Pickup
   - 
   - 
   - 
@@ -40,6 +40,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 1360596577
+    locked: 0
+  - name: Pickup
+    uniqueID: 3487162509
     locked: 0
   - name: Default
     uniqueID: 0
