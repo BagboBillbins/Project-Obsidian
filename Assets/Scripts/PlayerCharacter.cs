@@ -23,6 +23,9 @@ public class PlayerCharacter : MonoBehaviour {
     private CapsuleCollider2D playerGroundCollider;
     [SerializeField]
     private PhysicsMaterial2D playerMovePhys, playerStopPhys;
+    [SerializeField]
+    private AudioClip jumpSound, deathSound;
+    
 
     private float horzInput;
     private float jump;
@@ -86,7 +89,12 @@ public class PlayerCharacter : MonoBehaviour {
     private void JumpInputHandler()
     {
         if (Input.GetButtonDown("Jump") && onGround)
+        {
             rb2d.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);//Impulse adds immediate action while force is not
+            audioSource.clip = jumpSound;
+            audioSource.Play();
+        }
+           
 
     }
     private void Move()
@@ -126,6 +134,7 @@ public class PlayerCharacter : MonoBehaviour {
     {
         playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, deadColliderSize);
         isDead = true;
+        audioSource.clip = deathSound;
         audioSource.Play();
         anim.SetBool("Dead", isDead);
         // rb2d.velocity = Vector2.zero;

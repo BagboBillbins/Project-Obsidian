@@ -7,6 +7,8 @@ public class Ghost : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip appear, disappear;
 
     // Use this for initialization
     void Start ()
@@ -20,6 +22,7 @@ public class Ghost : MonoBehaviour {
 	void FixedUpdate ()
     {
         anim.SetBool("Appear", true);
+        
 	}
     private void OnTriggerEnter2D(Collider2D collision)
 
@@ -27,6 +30,7 @@ public class Ghost : MonoBehaviour {
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerCharacter player = collision.GetComponent<PlayerCharacter>();
+            audioSource.clip = disappear;
             audioSource.Play();
             anim.SetBool("Vanish", true);
         }

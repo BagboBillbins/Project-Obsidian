@@ -21,6 +21,9 @@ public class SkullCheckpoint : MonoBehaviour
     public void setActive(bool value)
     {
         active = value;
+        if(!active)
+            Destroy(gameObject);
+     
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
