@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
     private AudioSource audioSource;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider2D;
+    private static int pickupCount;
 
     private void Start()
     {
@@ -18,6 +19,8 @@ public class Pickup : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            pickupCount++;
+            Debug.Log("Pickup count: " + pickupCount);
             audioSource.Play();
             spriteRenderer.enabled = false;
             boxCollider2D.enabled = false;
