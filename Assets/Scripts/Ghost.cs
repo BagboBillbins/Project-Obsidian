@@ -7,6 +7,7 @@ public class Ghost : MonoBehaviour {
     private SpriteRenderer spriteRenderer;
     private Animator anim;
     private AudioSource audioSource;
+    private BoxCollider2D boxCollider2D;
     [SerializeField]
     private AudioClip appear, disappear;
 
@@ -16,6 +17,7 @@ public class Ghost : MonoBehaviour {
         spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        boxCollider2D = GetComponent<BoxCollider2D>();
     }
 	
 	// Update is called once per frame
@@ -33,6 +35,7 @@ public class Ghost : MonoBehaviour {
             audioSource.clip = disappear;
             audioSource.Play();
             anim.SetBool("Vanish", true);
+            boxCollider2D.enabled = false;
         }
         else
             Debug.Log("Something has hit a hazard");
