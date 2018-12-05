@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerCharacter : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class PlayerCharacter : MonoBehaviour
     private PhysicsMaterial2D playerMovePhys, playerStopPhys;
     [SerializeField]
     private AudioClip jumpSound, deathSound;
+    [SerializeField]
+    private Text deathText;
 
     private float horzInput;
     private float jump;
@@ -40,7 +43,8 @@ public class PlayerCharacter : MonoBehaviour
         aliveColliderSize = playerGroundCollider.size.y;
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();     
+        audioSource = GetComponent<AudioSource>();
+        deathText.enabled = false;
     }
 	void Update ()
     {
@@ -113,6 +117,8 @@ public class PlayerCharacter : MonoBehaviour
         audioSource.clip = deathSound;
         audioSource.Play();
         anim.SetBool("Dead", isDead);
+        deathText.enabled = true;
+        
     }
     public void CheckRespawn()
     {
@@ -131,6 +137,7 @@ public class PlayerCharacter : MonoBehaviour
         isDead = false;
         playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, aliveColliderSize);
         anim.SetBool("Dead", isDead);
+        deathText.enabled = false;
     }
     public void SetCurrentCheck(SkullCheckpoint newCurrentCheck)
     {
