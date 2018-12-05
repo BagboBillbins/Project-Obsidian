@@ -341,7 +341,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4936008793515220, guid: d5424eba416579b438eed42a727d851b, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 61807040936243756, guid: d5424eba416579b438eed42a727d851b,
         type: 2}
@@ -380,7 +380,7 @@ Transform:
   - {fileID: 1331368524}
   - {fileID: 272304966}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &447444171 stripped
 Transform:
@@ -566,7 +566,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 2.69
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -589,7 +589,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.419987, y: -0.2, z: 10}
+  m_LocalPosition: {x: 56.529987, y: 2.49, z: -0.0042972565}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1895384789}
@@ -772,7 +772,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4124560813615746, guid: 819104a0ea5cdef4b848db2a8e7c28dc, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 212706760377248982, guid: 819104a0ea5cdef4b848db2a8e7c28dc,
         type: 2}
@@ -932,18 +932,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4786669427148426, guid: 2b9e727d537cb384a8a06efde480fdd9, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114837121073147838, guid: 2b9e727d537cb384a8a06efde480fdd9,
-        type: 2}
-      propertyPath: vcam1
-      value: 
-      objectReference: {fileID: 2115195796}
-    - target: {fileID: 114837121073147838, guid: 2b9e727d537cb384a8a06efde480fdd9,
-        type: 2}
-      propertyPath: vcam2
-      value: 
-      objectReference: {fileID: 2070584769}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b9e727d537cb384a8a06efde480fdd9, type: 2}
   m_IsPrefabAsset: 0
@@ -1069,7 +1059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1142276357
 GameObject:
@@ -1184,7 +1174,7 @@ Transform:
   - {fileID: 447444171}
   - {fileID: 85457746}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1552514409
 GameObject:
@@ -1216,7 +1206,7 @@ Transform:
   - {fileID: 1527493724}
   - {fileID: 163854958}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1554962226
 GameObject:
@@ -4030,7 +4020,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4732744398763338, guid: dcd43be50f07f6a409a91f0e62813c37, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 82094854063659464, guid: dcd43be50f07f6a409a91f0e62813c37,
         type: 2}
@@ -4137,7 +4127,6 @@ GameObject:
   - component: {fileID: 2070584768}
   - component: {fileID: 2070584769}
   - component: {fileID: 2070584770}
-  - component: {fileID: 2070584771}
   m_Layer: 0
   m_Name: CM vcam2
   m_TagString: Untagged
@@ -4200,21 +4189,6 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1554962229}
   m_ConfineScreenEdges: 1
   m_Damping: 0
---- !u!114 &2070584771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2070584767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4700f9f03ad19f94baf0367cb7a9c988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Width: 2
-  m_Damping: 1
-  m_MinFOV: 1
-  m_MaxFOV: 60
 --- !u!1001 &2077587395
 Prefab:
   m_ObjectHideFlags: 0

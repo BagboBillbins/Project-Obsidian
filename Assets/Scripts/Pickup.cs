@@ -27,5 +27,4 @@ public class Pickup : MonoBehaviour
             Destroy(gameObject, audioSource.clip.length);
         }
     }
-
 }

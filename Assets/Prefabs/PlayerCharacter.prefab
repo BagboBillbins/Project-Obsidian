@@ -221,8 +221,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadColliderSize: 1
-  lives: 3
-  name: Nobunaga
   jumpForce: 16
   speed: 40
   groundContactFilter:

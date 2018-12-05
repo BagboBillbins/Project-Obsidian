@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Cinemachine;
-
-
 
 public class PlayerCharacter : MonoBehaviour
 {
@@ -37,8 +34,6 @@ public class PlayerCharacter : MonoBehaviour
     private Animator anim;
     private AudioSource audioSource;
     private SkullCheckpoint currentCheck;
-    
-
 
     void Start ()
     {
@@ -55,8 +50,6 @@ public class PlayerCharacter : MonoBehaviour
         UpdateOnGround();
         UpdateHorzInput();
         JumpInputHandler();
-
-
         //transform.Translate(0, -0.1f, 0); // does not use physics
         //rigbody2D.AddForce(transform.forward * thrust);// uses physics
     }

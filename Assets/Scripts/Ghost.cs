@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class Ghost : MonoBehaviour {
-
+public class Ghost : MonoBehaviour
+{
     [SerializeField]
     private AudioClip appear, disappear;
     [SerializeField]
@@ -16,8 +16,6 @@ public class Ghost : MonoBehaviour {
     private BoxCollider2D boxCollider2D;
     private CinemachineVirtualCamera cinemachine;
     
-
-    // Use this for initialization
     void Start ()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -27,20 +25,15 @@ public class Ghost : MonoBehaviour {
         cinemachine = vcam2;
         vcam2.MoveToTopOfPrioritySubqueue();
         anim.SetBool("Appear", true);
-
     }
     private void Update()
-    {
-
+    { 
         if (this.anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
         {
-
             cinemachine = vcam1;
             vcam1.MoveToTopOfPrioritySubqueue();
-        }
-        
+        }  
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
