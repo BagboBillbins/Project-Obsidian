@@ -105,7 +105,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f9f9795adad5f9749bf3cf8a9fc38edb, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -243,6 +243,8 @@ MonoBehaviour:
   playerGroundCollider: {fileID: 70205685565543706}
   playerMovePhys: {fileID: 6200000, guid: 7cb0fa590997cc347b5d36f29ca6d4d7, type: 2}
   playerStopPhys: {fileID: 6200000, guid: a98d1cb4d9a10e1468e1b72c2eed9458, type: 2}
+  jumpSound: {fileID: 8300000, guid: f9f9795adad5f9749bf3cf8a9fc38edb, type: 3}
+  deathSound: {fileID: 8300000, guid: 533071da7bc3fd749b6154a3ea689f80, type: 3}
 --- !u!212 &212720959418122378
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -275,8 +277,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1290556793
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb797e2122af8d546a4c52973b33f2d2, type: 3}
   m_Color: {r: 0.9528302, g: 0.9033909, b: 0.94311893, a: 1}
