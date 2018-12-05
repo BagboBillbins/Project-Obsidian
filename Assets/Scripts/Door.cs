@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
 
     [SerializeField]
     private string sceneToLoad;
+
     private bool playerInTrig;
     private AudioSource audioSource;
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SkullCheckpoint : MonoBehaviour
 {
-
     private bool active = false;
     private SpriteRenderer spriteRenderer;
     private AudioSource audioScource;
@@ -16,7 +15,6 @@ public class SkullCheckpoint : MonoBehaviour
         audioScource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player") && !active)
@@ -27,15 +25,12 @@ public class SkullCheckpoint : MonoBehaviour
             anim.SetBool("Dead", true);
             anim.SetBool("Activated", true);
             audioScource.Play();
-
         }
-
     }
     public void setActive(bool value)
     {
         active = value;
         if (!active)
             Destroy(gameObject);
-
     }
 }

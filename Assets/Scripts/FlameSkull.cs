@@ -10,7 +10,6 @@ public class FlameSkull : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
@@ -20,7 +19,6 @@ public class FlameSkull : MonoBehaviour
             audioSource.Play();
             player.Dead();
             player.CheckRespawn(); //respawn player at checkpoint
-
         }
     }
 }

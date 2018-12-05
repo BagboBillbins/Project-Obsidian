@@ -22,10 +22,10 @@ public class PlayerCharacter : MonoBehaviour
 
     private float horzInput;
     private float jump;
+    private float aliveColliderSize;
     private float maxSpeed = 10f;
     private bool facingRight;
     private bool onGround;
-    private float aliveColliderSize;
     private bool isDead;
     private bool gameStarted;
 
@@ -38,20 +38,15 @@ public class PlayerCharacter : MonoBehaviour
     void Start ()
     {
         aliveColliderSize = playerGroundCollider.size.y;
-        //have to initialize rigidbody or will throw null exception
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
-        
+        audioSource = GetComponent<AudioSource>();     
     }
 	void Update ()
     {
-        //rb2d.gravityScale = 5;
         UpdateOnGround();
         UpdateHorzInput();
         JumpInputHandler();
-        //transform.Translate(0, -0.1f, 0); // does not use physics
-        //rigbody2D.AddForce(transform.forward * thrust);// uses physics
     }
     void FixedUpdate()
     {
@@ -110,7 +105,6 @@ public class PlayerCharacter : MonoBehaviour
     private void UpdateOnGround()
     {
         onGround = groundDetectTrig.OverlapCollider(groundContactFilter, groundHitDetector) > 0;
-        //Debug.Log("Grounded: " + onGround);
     }
     public void Dead()
     {
@@ -119,7 +113,6 @@ public class PlayerCharacter : MonoBehaviour
         audioSource.clip = deathSound;
         audioSource.Play();
         anim.SetBool("Dead", isDead);
-        // rb2d.velocity = Vector2.zero;
     }
     public void CheckRespawn()
     {
@@ -129,7 +122,7 @@ public class PlayerCharacter : MonoBehaviour
     public void Respawn()
     {
         if (currentCheck == null)
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);//reload current scene on death
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         else
         {
             rb2d.velocity = Vector2.zero;
