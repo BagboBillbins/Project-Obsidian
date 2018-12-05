@@ -19,15 +19,12 @@ public class Ghost : MonoBehaviour {
         audioSource = GetComponent<AudioSource>();
         boxCollider2D = GetComponent<BoxCollider2D>();
     }
-	
-	// Update is called once per frame
 	void FixedUpdate ()
     {
         anim.SetBool("Appear", true);
-        
 	}
-    private void OnTriggerEnter2D(Collider2D collision)
 
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -37,9 +34,5 @@ public class Ghost : MonoBehaviour {
             anim.SetBool("Vanish", true);
             boxCollider2D.enabled = false;
         }
-        else
-            Debug.Log("Something has hit a hazard");
-        //Destroy(spriteRenderer);
-
     }
 }

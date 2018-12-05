@@ -15,6 +15,15 @@ public class Door : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
+    private void Update()
+    {
+        if (Input.GetButtonDown("Activate") && playerInTrig)
+        {
+            audioSource.Play();
+            Debug.Log("Player activated door");
+            SceneManager.LoadScene(sceneToLoad);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -30,15 +39,6 @@ public class Door : MonoBehaviour
             playerInTrig = false;
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Activate") && playerInTrig)
-        {
-            audioSource.Play();
-            Debug.Log("Player activated door");
-            SceneManager.LoadScene(sceneToLoad);
-        }
-    }
+    
 }
 

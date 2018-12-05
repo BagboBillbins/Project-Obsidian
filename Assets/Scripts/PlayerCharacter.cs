@@ -10,10 +10,6 @@ public class PlayerCharacter : MonoBehaviour {
     [SerializeField]
     private float deadColliderSize = 1;
     [SerializeField]
-    private int lives = 3;
-    [SerializeField]
-    private string name = "";
-    [SerializeField]
     private float jumpForce = 5, speed = 5;
     [SerializeField]
     private ContactFilter2D groundContactFilter;
@@ -26,7 +22,6 @@ public class PlayerCharacter : MonoBehaviour {
     [SerializeField]
     private AudioClip jumpSound, deathSound;
     
-
     private float horzInput;
     private float jump;
     private float maxSpeed = 10f;
@@ -34,7 +29,6 @@ public class PlayerCharacter : MonoBehaviour {
     private bool onGround;
     private float aliveColliderSize;
     private bool isDead;
-   // private bool canMove;
 
     private Collider2D[] groundHitDetector = new Collider2D[16];
     private Rigidbody2D rb2d;
@@ -42,7 +36,6 @@ public class PlayerCharacter : MonoBehaviour {
     private AudioSource audioSource;
     private SkullCheckpoint currentCheck;
 
-    // Use this for initialization
     void Start ()
     {
         aliveColliderSize = playerGroundCollider.size.y;
@@ -51,7 +44,6 @@ public class PlayerCharacter : MonoBehaviour {
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
-	// Update is called once per frame
 	void Update ()
     {
         //rb2d.gravityScale = 5;
@@ -76,16 +68,13 @@ public class PlayerCharacter : MonoBehaviour {
             else if (horzInput > 0 && facingRight)
                 Flip();
         }
-        
-        CheckRespawn();
-        
+        CheckRespawn();  
     }
     
     private void UpdateHorzInput()
     {
         horzInput = Input.GetAxisRaw("Horizontal"); //raw ignores unity's smoothing filter which makes movement more responsive
     }
-
     private void JumpInputHandler()
     {
         if (Input.GetButtonDown("Jump") && onGround)
@@ -94,12 +83,9 @@ public class PlayerCharacter : MonoBehaviour {
             audioSource.clip = jumpSound;
             audioSource.Play();
         }
-           
-
     }
     private void Move()
-    {
-        
+    { 
         if(!isDead)
         {
             rb2d.AddForce(Vector2.right * horzInput * speed);
@@ -127,9 +113,7 @@ public class PlayerCharacter : MonoBehaviour {
     {
         onGround = groundDetectTrig.OverlapCollider(groundContactFilter, groundHitDetector) > 0;
         //Debug.Log("Grounded: " + onGround);
-
     }
-
     public void Dead()
     {
         playerGroundCollider.size = new Vector2(playerGroundCollider.size.x, deadColliderSize);
@@ -144,7 +128,6 @@ public class PlayerCharacter : MonoBehaviour {
         if (isDead && Input.GetButtonDown("Respawn"))
             Respawn();
     }
-  
     public void Respawn()
     {
         if (currentCheck == null)
@@ -165,7 +148,5 @@ public class PlayerCharacter : MonoBehaviour {
 
         currentCheck = newCurrentCheck;
         currentCheck.setActive(true);
-
     }
-
 }

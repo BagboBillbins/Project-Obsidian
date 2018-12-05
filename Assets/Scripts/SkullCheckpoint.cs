@@ -10,20 +10,11 @@ public class SkullCheckpoint : MonoBehaviour
     private AudioSource audioScource;
     private Animator anim;
 
-    // Use this for initialization
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         audioScource = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
-    }
-
-    public void setActive(bool value)
-    {
-        active = value;
-        if(!active)
-            Destroy(gameObject);
-     
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,6 +29,13 @@ public class SkullCheckpoint : MonoBehaviour
             audioScource.Play();
 
         }
+
+    }
+    public void setActive(bool value)
+    {
+        active = value;
+        if (!active)
+            Destroy(gameObject);
 
     }
 }
