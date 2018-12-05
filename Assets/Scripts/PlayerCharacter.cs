@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Cinemachine;
 
 
 
-public class PlayerCharacter : MonoBehaviour {
-
+public class PlayerCharacter : MonoBehaviour
+{
     [SerializeField]
     private float deadColliderSize = 1;
     [SerializeField]
@@ -21,7 +22,7 @@ public class PlayerCharacter : MonoBehaviour {
     private PhysicsMaterial2D playerMovePhys, playerStopPhys;
     [SerializeField]
     private AudioClip jumpSound, deathSound;
-    
+
     private float horzInput;
     private float jump;
     private float maxSpeed = 10f;
@@ -29,12 +30,15 @@ public class PlayerCharacter : MonoBehaviour {
     private bool onGround;
     private float aliveColliderSize;
     private bool isDead;
+    private bool gameStarted;
 
     private Collider2D[] groundHitDetector = new Collider2D[16];
     private Rigidbody2D rb2d;
     private Animator anim;
     private AudioSource audioSource;
     private SkullCheckpoint currentCheck;
+    
+
 
     void Start ()
     {
@@ -43,6 +47,7 @@ public class PlayerCharacter : MonoBehaviour {
         rb2d = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        
     }
 	void Update ()
     {
@@ -68,7 +73,7 @@ public class PlayerCharacter : MonoBehaviour {
             else if (horzInput > 0 && facingRight)
                 Flip();
         }
-        CheckRespawn();  
+        CheckRespawn();
     }
     
     private void UpdateHorzInput()
