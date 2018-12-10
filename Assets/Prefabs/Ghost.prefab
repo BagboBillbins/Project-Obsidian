@@ -195,6 +195,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   appear: {fileID: 8300000, guid: 5d750f5f1616bf94888158a000f47d2d, type: 3}
   disappear: {fileID: 8300000, guid: f50f9da4ce9d07b42bb2e0c13233ff1c, type: 3}
+  vcam1: {fileID: 0}
+  vcam2: {fileID: 0}
 --- !u!212 &212706760377248982
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -227,8 +229,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -807804787
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e9d7a45091f61dd439f1f3de4352c196, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

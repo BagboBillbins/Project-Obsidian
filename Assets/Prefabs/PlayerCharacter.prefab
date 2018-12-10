@@ -78,7 +78,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03, y: -0.59}
+  m_Offset: {x: 0.03, y: -0.88}
   serializedVersion: 2
   m_Radius: 0.36
 --- !u!70 &70205685565543706
@@ -243,6 +243,7 @@ MonoBehaviour:
   playerStopPhys: {fileID: 6200000, guid: a98d1cb4d9a10e1468e1b72c2eed9458, type: 2}
   jumpSound: {fileID: 8300000, guid: f9f9795adad5f9749bf3cf8a9fc38edb, type: 3}
   deathSound: {fileID: 8300000, guid: 533071da7bc3fd749b6154a3ea689f80, type: 3}
+  deathText: {fileID: 0}
 --- !u!212 &212720959418122378
 SpriteRenderer:
   m_ObjectHideFlags: 1

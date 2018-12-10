@@ -6,9 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Project Obsidian Level 1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Main Menu.unity
+    guid: 2d0471c634ca56d4bb582d7e033540ac
   - enabled: 1
-    path: Assets/Scenes/Project Obsidian Level 2.unity
+    path: Assets/Scenes/Level 1.unity
+    guid: 51f6cc7236585c4469d4da830ab46652
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
     guid: 330e9d42263063b4aa8205eab42274ff
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
