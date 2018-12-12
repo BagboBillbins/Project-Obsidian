@@ -7,5 +7,5 @@ Music - Aaron Baer
 Art - ansimuz
 
 
-itch.io
+itch.io:
 https://bagbo-billbins.itch.io/shade-hunt
