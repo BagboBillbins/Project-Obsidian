@@ -1,7 +1,4 @@
-# Project-Obsidian
-2D Platformer 
-
-Shade Hunt
+# Shade Hunt
 
 Game/Sound Design - Aaron Baer
 Music - Aaron Baer
