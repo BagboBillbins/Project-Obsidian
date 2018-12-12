@@ -180,11 +180,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Game/Sound Desig - Aaron Baer
+  m_Text: 'Game/Sound Design-Aaron Baer
 
-    Music - Aaron Baer
+    Music-Aaron Baer
 
-    Artwork - Ansimuz'
+    Artwork-Ansimuz'
 --- !u!222 &56642467
 CanvasRenderer:
   m_ObjectHideFlags: 0
